@@ -6,12 +6,9 @@ readme = 'README.md'
 with open(readme, 'rb') as f:
     long_description = f.read().decode('utf-8')
 
-with open('requirements.txt') as f:
-    requirements = [l for l in f.read().splitlines() if l]
-
 setup(
     name='whistlepy',
-    version='0.0.2',
+    version='0.0.3',
     author='sai',
     author_email='3030159@qq.com',
     url='https://github.com/atuple/whistlepy',
@@ -20,5 +17,8 @@ setup(
     license='MIT',
     packages=["whistlepy"],
     zip_safe=False,
-    install_requires=requirements
+    install_requires=[
+        "requests>=2.4.3",
+        "python-dateutil>=2.5.2"
+    ]
 )
