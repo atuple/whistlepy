@@ -8,8 +8,7 @@ session_interface = RedisStorage(
     prefix="Whistleepy"
 )
 
-appkey = "appkey"
-secret = "secret"
+appkey = ""
+secret = ""
 ws = WhistleClient(appkey=appkey, secret=secret,session=session_interface)
-print(ws.access_token)
-print(ws.oauth.get_user_info("student_number"))
+print(ws.fetch_access_token())

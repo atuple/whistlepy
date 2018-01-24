@@ -50,7 +50,8 @@ class WhistleNotificationApi(BaseWhistleAPI):
         :return: 返回的 JSON 数据包(notification_id)
         """
         notification_data["access_token"] = self._access_token
-        return self._get(
-            'getDetails',
+        print(notification_data)
+        return self._post(
+            'sendNotification?access_token=' + self._access_token,
             params=notification_data
         )

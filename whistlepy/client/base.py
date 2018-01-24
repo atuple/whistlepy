@@ -79,6 +79,10 @@ class BaseWhistleClient(object):
             body = body.encode('utf-8')
             kwargs['data'] = body
 
+        if method.lower() == "post":
+            kwargs['json'] = kwargs['params']
+            del kwargs['params']
+
         kwargs['timeout'] = kwargs.get('timeout', self.timeout)
         result_processor = kwargs.pop('result_processor', None)
         res = self._http.request(

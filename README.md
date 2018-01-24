@@ -61,10 +61,9 @@
     应用消费积分
 
 
-pip 依赖库
+pip 安装
 ```bash
-pip install requests>=2.4.3
-pip install python-dateutil>=2.5.2
+pip install whistlepy
 ```
 
 
