@@ -11,4 +11,5 @@ session_interface = RedisStorage(
 appkey = ""
 secret = ""
 ws = WhistleClient(appkey=appkey, secret=secret,session=session_interface)
-print(ws.fetch_access_token())
+# print(ws.fetch_access_token())
+print(ws.org.get_org_tree())

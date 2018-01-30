@@ -15,6 +15,7 @@ class WhistleClient(BaseWhistleClient):
         super(WhistleClient, self).__init__(
             appkey, access_token, session, timeout, auto_retry
         )
+
         self.appkey = appkey
         self.secret = secret
         self.scope = scope
@@ -25,6 +26,8 @@ class WhistleClient(BaseWhistleClient):
         self.label = api.WhistleLabelApi(self)
         self.geo = api.WhistleWifiLocApi(self)
         self.adhoc = api.WhistleAdhocApi(self)
+        self.auth = api.WhistleAuthApi(self)
+        self.post = api.WhistlePostApi(self)
 
     def fetch_access_token(self):
         """
