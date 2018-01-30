@@ -8,14 +8,14 @@ with open(readme, 'rb') as f:
 
 setup(
     name='whistlepy',
-    version='0.0.3',
+    version='0.0.7',
     author='sai',
     author_email='3030159@qq.com',
     url='https://github.com/atuple/whistlepy',
     keywords='whistle, SDK, weishao',
     description=u'whistle sdk',
     license='MIT',
-    packages=["whistlepy"],
+    packages=["whistlepy", "whistlepy.client", "whistlepy.session", "whistlepy.client.api"],
     zip_safe=False,
     install_requires=[
         "requests>=2.4.3",

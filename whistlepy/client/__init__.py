@@ -24,6 +24,7 @@ class WhistleClient(BaseWhistleClient):
         self.org = api.WhistleOrganizationApi(self)
         self.label = api.WhistleLabelApi(self)
         self.geo = api.WhistleWifiLocApi(self)
+        self.adhoc = api.WhistleAdhocApi(self)
 
     def fetch_access_token(self):
         """

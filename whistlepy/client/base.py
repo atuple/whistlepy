@@ -90,7 +90,6 @@ class BaseWhistleClient(object):
             url=url,
             **kwargs
         )
-        print(url)
         return self._handle_result(
             res, method, url, result_processor, **kwargs
         )
@@ -117,7 +116,6 @@ class BaseWhistleClient(object):
 
         if 'errcode' in result:
             result['errcode'] = int(result['errcode'])
-        print(result)
 
         if 'code' in result and result["code"] == 401:
             if result['errno'] == 100401:
