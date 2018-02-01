@@ -3,7 +3,6 @@ from whistlepy.client.api.base import BaseWhistleAPI
 
 class WhistlePostApi(BaseWhistleAPI):
     API_PATH_URL = "api/v2/index.php/post/"
-    API_BASE_URL = "https://k12.api.weishao.com.cn/"
 
     def get_list(self):
         """
