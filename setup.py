@@ -8,7 +8,7 @@ with open(readme, 'rb') as f:
 
 setup(
     name='whistlepy',
-    version='0.0.8',
+    version='0.0.9',
     author='sai',
     author_email='3030159@qq.com',
     url='https://github.com/atuple/whistlepy',
