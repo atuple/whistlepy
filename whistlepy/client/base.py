@@ -158,6 +158,13 @@ class BaseWhistleClient(object):
             **kwargs
         )
 
+    def post_to(self, url, **kwargs):
+        return self._request(
+            method='post',
+            url_or_endpoint=url,
+            **kwargs
+        )
+
     def _post(self, url, **kwargs):
         warnings.warn('`_post` method of `WhistleClient` is deprecated, will be removed in 1.6,'
                       'Use `post` instead',

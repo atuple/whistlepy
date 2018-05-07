@@ -15,7 +15,7 @@ class BaseWhistleAPI(object):
     def _post(self, url, **kwargs):
         if getattr(self, 'API_BASE_URL', None):
             kwargs['api_base_url'] = self.API_BASE_URL
-        return self._client.post(self.API_PATH_URL + url, **kwargs)
+        return self._client.post_to(self.API_PATH_URL + url, **kwargs)
 
     @property
     def _access_token(self):
